@@ -102,7 +102,7 @@ namespace.Carousel = function(sel){
         //find control using its path as a reference
         $( 'a.control', controlsEl ).each( function() {
             $(this).removeClass('selected');
-            if( $(this).data('to') === pageNo ) {
+            if( parseInt($(this).data('to'),10) === pageNo ) {
                 $(this).addClass('selected');
                 //change the url
                 splitIdx = $(this).attr('href').split('#');
